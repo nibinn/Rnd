@@ -1,0 +1,75 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Page User {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+        <style>
+      .noHover{
+    pointer-events: none;
+}
+    </style>
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">CUSTOMER</h4>
+                  <p class="card-category">Add New Customer</p>
+                </div>
+                <div class="card-body">
+                  <form action=""  method="POST">
+                    {% csrf_token %}
+                     <!-- {{ form.as_p }} -->
+                    <div class="row">
+                     {{form.errors}}
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Name</label>
+                          {{form.name}}
+                          <!-- <input type="text" class="form-control" id="name"> -->
+                        </div>
+                      </div>
+                     <div class="col-md-4">
+                      <div class="form-group">
+                        <label class="bmd-label-floating">Email</label>
+                        {{form.email}}
+                        <!-- <input type="text" class="form-control" id="email"> -->
+                      </div>
+                    </div>
+                    </div>
+                    
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Address</label>
+                          {{form.address}}
+                          <!-- <input type="text" class="form-control" id='addr'> -->
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Phone</label>
+                          {{form.phone}}
+                          <!-- <input type="text" class="form-control" id='phone'> -->
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div>
+                      <!-- <button type="submit" class='button' >ADD</button> -->
+                      <button type="submit" name="register" class="btn btn-primary pull-left">ADD</button>
+                    </div>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

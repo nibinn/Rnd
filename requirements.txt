@@ -1,0 +1,16 @@
+asgiref
+autopep8
+django==2.2.10
+pycodestyle
+pytz
+sqlparse
+Unipath
+dj-database-url
+python-decouple
+gunicorn
+whitenoise
+mysqlclient==1.4.6
+pymysql
+pandas==1.2.3
+joblib==1.0.1
+xgboost==1.4.0
